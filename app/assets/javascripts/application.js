@@ -18,5 +18,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/app
-//= require_tree .
 //= require bootstrap.min
+//= require_tree .
