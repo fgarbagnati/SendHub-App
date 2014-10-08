@@ -1,10 +1,11 @@
 var app = app || {};
 
 app.ContactBookView = Backbone.View.extend({
-  el: '#contactsContainer',
+  el: 'body', //'#contactsContainer',
 
-  initialize: function( initialContacts ) {
-    this.collection = new app.ContactBook( initialContacts );
+  initialize: function() {
+    this.collection = new app.ContactBook();
+    _.bindAll(this);
     this.template = _.template( $( '#contactTemplate' ).html() )
     this.render();
   },
@@ -20,5 +21,23 @@ app.ContactBookView = Backbone.View.extend({
       model: item
     });
     this.$el.append( contactView.render().el );
+  },
+
+  events:{
+    'click #addNewContact':'addContact'
+  },
+
+  addContact: function( e ) {
+    e.preventDefault();
+
+    var formData = {};
+
+    $( '#addContact div' ).children( 'input' ).each( function( i, el ) {
+      if( $( el ).val() != '' )
+      {
+        formData[ el.id ] = $( el ).val();
+      }
+    });
+    this.collection.add( new app.Contact( formData ))
   }
 });

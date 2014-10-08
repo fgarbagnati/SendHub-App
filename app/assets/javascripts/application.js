@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require underscore
 //= require bootstrap.min
-//= require backbone
-//= require backbone_rails_sync
-//= require backbone_datalink
+//= require backbone_1.1.2
 //= require_tree ./templates
 //= require_tree .
