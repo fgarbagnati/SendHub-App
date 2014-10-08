@@ -31,6 +31,9 @@ gem 'spring',        group: :development
 # Backbone-Rails
 gem 'rails-backbone', '~> 0.9.10'
 
+#Underscore Templating
+gem 'underscore-template-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
