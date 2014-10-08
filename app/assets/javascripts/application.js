@@ -22,4 +22,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/app
+//= require_tree ./templates
 //= require_tree .
